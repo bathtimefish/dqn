@@ -80,7 +80,7 @@ class Agent():
         if not os.path.exists(SAVE_NETWORK_PATH):
             os.makedirs(SAVE_NETWORK_PATH)
 
-        self.sess.run(tf.initialize_all_variables())
+        self.sess.run(tf.global_variables_initializer())
 
         # Load network
         if LOAD_NETWORK:
